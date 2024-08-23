@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(214, 208, 208);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container
+{
+    width: 800px;
+    height: 600px;
+    background-color: white;
+    box-shadow: 3px;
+    display: flex;
+}
+.ledger
+{
+    background-color: rgb(20, 19, 19);
+    padding: 20px;
+    flex: 1;;
+    color: white;
+}
+.income-expense
+{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    margin: 20px;
+}
+.income-expense div.inc
+{
+   color: green;
+   border: 3px solid green;
+   padding: 20px;
+}
+.income-expense div.exp
+{
+    color: red;
+    border: 3px solid red;
+    padding: 20px;
+}
+.ledger h1,
+.ledger h4
+{
+    margin: 10px;
+}
+.ledger h2
+{
+    text-transform: uppercase;
+    color: yellow;
+    margin: 10px;
+}
+.transaction
+{
+    flex: 1;
+}
+label
+{
+    display:inline-block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+input
+{
+    outline: none;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+#form
+{
+    padding: 20px;
+    margin-top: 5px;
+}
+.form-control
+{
+    margin-top: 10px;
+}
+.button
+{
+    margin-top: 25px;
+    color: white;
+    background-color: blueviolet;
+    padding: 20px;
+    display: block;
+    background-color: blue;
+}
+.transaction
+{
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    flex-direction: column;
+    overflow-y: scroll;
+    text-align: center;
+
+}
+.transaction h3{
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+}
+.trans
+{
+    list-style-type: none;
+
+}
+.trans li
+{
+    background-color: white;
+    color: black;
+    margin: 20px;
+    position: relative;
+    border: 1px solid rgb(155, 148, 148);
+    display: flex;
+    justify-content: space-between;
+    cursor:pointer;
+}
+.btn-del
+{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    color: white;
+    cursor:pointer;
+    line-height: 20px;
+    background-color: red;
+    opacity: 0;
+}
+.trans li:hover .btn-del{
+    opacity: 1;
+}
+.trans li.exp
+{
+    border-left: 5px solid red;
+}
+.trans li.inc
+{
+    border-left: 5px solid green;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color: grey;
+    border-radius: 6px;
+
+}
